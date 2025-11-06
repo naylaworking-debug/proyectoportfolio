@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
+
 body {
 font-family: 'Poppins', sans-serif;
 background-color: #f8f9fa;
@@ -38,33 +40,79 @@ transition: color 0.3s;
 color: #007bff;
 outline: none;
 }
-
 .hero {
-background: linear-gradient(120deg, #1a1a1a, #f36e02);
-color: white;
-display: flex;
-justify-content: center;
-align-items: center;
-height: 90vh;
-text-align: center;
+  background: linear-gradient(135deg, #000);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
 }
+
+.intro-code {
+  font-family: "Fira Code", monospace;
+  background-color: #000;   
+  color: #00ff00;              
+  padding: 20px 30px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  text-align: left;
+  white-space: pre-wrap;
+  overflow: hidden;
+  border-left: 3px solid #00ff00;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+  position: relative;
+}
+
+
+.intro-code::after {
+  content: "|";
+  position: absolute;
+  right: 15px;
+  color: #00ff00;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
 .hero h1 {
-font-size: 2.8rem;
+  font-size: 2.6rem;
+  margin: 0;
+}
+
+.hero span {
+  color: #00ff00;
+}
+
+.hero p {
+  max-width: 600px;
+  line-height: 1.5;
 }
 
 .btn-primario {
-display: inline-block;
-margin-top: 20px;
-padding: 10px 25px;
-background: #4303da;
-color: #fff;
-border-radius: 8px;
-text-decoration: none;
-transition: transform 0.3s ease;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  background: #053b1cd3;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
+
 .btn-primario:hover {
-transform: scale(1.05);
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,212,255,0.4);
 }
+
 
 
 section:nth-child(even) {
@@ -133,49 +181,7 @@ height: 150px;
 border-radius: 10px;
 object-fit: cover;
 }
-/* .contacto {
-display: inline-flex;
-justify-content: center;
-align-items: center;
-min-height: 100vh;
-}
 
-.contacto form {
-border: 1px solid #000;
-padding: 20px;
-display: inline-flex;
-flex-direction: column;
-gap: 10px;
-width: 300px;
-}
-
-.contacto input {
-padding: 8px;
-border-radius: 5px;
-border: 1px solid #999;
-}
-
-.checkbox-terminos {
-display: flex;
-align-items: center;
-gap: 5px;
-}
-
-.contacto button {
-padding: 10px;
-background-color: #333;
-color: #fff;
-border-radius: 5px;
-border: none;
-cursor: pointer;
-transition: background-color 0.3s;
-}
-
-.contacto button:hover,
-.contacto button:focus {
-background-color: #0056b3;
-outline: none;
-} */
 
 .contacto form {
 display: flex;

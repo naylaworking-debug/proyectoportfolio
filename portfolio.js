@@ -27,3 +27,23 @@ enlaces.forEach((enlace) => {
     });
 });
 });
+
+const codeText = `if (necesitasUnaPersonaOrganizada) {
+    contactame();
+} else {
+    console.log("El caos también es una forma de arte 🎨");
+}`;
+
+let index = 0;
+
+function typeEffect() {
+  const codeElement = document.getElementById("intro-code");
+  if (!codeElement) return;
+  if (index < codeText.length) {
+    codeElement.textContent += codeText.charAt(index);
+    index++;
+    setTimeout(typeEffect, 55); 
+  }
+}
+
+window.addEventListener("load", typeEffect);
