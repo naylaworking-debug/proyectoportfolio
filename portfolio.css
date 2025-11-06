@@ -1,40 +1,46 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+font-family: 'Poppins', sans-serif;
+background-color: #f8f9fa;
+color: #333;
+}
+h2 {
+text-align: center;
+font-weight: 600;
+margin-bottom: 20px;
+color: #222;
 }
 
 #navbar {
-    background-color: #222;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+background-color: #222;
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 1000;
 }
 
 #navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    margin: 0;
-    gap: 20px;
+list-style: none;
+display: flex;
+justify-content: center;
+padding: 10px;
+margin: 0;
+gap: 20px;
 }
 
 #navbar ul li a {
-    text-decoration: none;
-    color: white;
-    transition: color 0.3s;
+text-decoration: none;
+color: white;
+transition: color 0.3s;
 }
 
 #navbar ul li a:hover,
 #navbar ul li a:focus {
-    color: #007bff;
-    outline: none;
+color: #007bff;
+outline: none;
 }
 
 .hero {
-background: linear-gradient(120deg, #1a1a1a, #007bff);
+background: linear-gradient(120deg, #1a1a1a, #f36e02);
 color: white;
 display: flex;
 justify-content: center;
@@ -45,14 +51,12 @@ text-align: center;
 .hero h1 {
 font-size: 2.8rem;
 }
-.hero span {
-color: #00d4ff;
-}
+
 .btn-primario {
 display: inline-block;
 margin-top: 20px;
 padding: 10px 25px;
-background: #00d4ff;
+background: #4303da;
 color: #fff;
 border-radius: 8px;
 text-decoration: none;
@@ -62,153 +66,192 @@ transition: transform 0.3s ease;
 transform: scale(1.05);
 }
 
+
+section:nth-child(even) {
+background-color: #ffffff;
+}
+section:nth-child(odd) {
+background-color: #f5f7fa;
+}
 section {
-    padding: 100px 20px 50px; 
-    min-height: 100vh;
+padding: 100px 10%;
+border-radius: 12px;
 }
 
 .presentacion {
-    background-color: #f0f0f0;
-    margin-top: 20px;
-    padding: 20px;
-    border-radius: 8px;
+background-color: #f0f0f0;
+margin-top: 20px;
+padding: 20px;
+border-radius: 8px;
 }
 
 .formacion-academica {
-    text-align: left;
-    margin-top: 20px;
+text-align: left;
+margin-top: 20px;
 }
 
 .formacion-academica ul li {
-    color: #333;
+color: #333;
 }
 
 .experiencia-laboral table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+width: 100%;
+border-collapse: collapse;
+background: #fff;
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
-
-.experiencia-laboral th,
-.experiencia-laboral td {
-    border: 1px solid #333;
-    text-align: left;
-    padding: 5px;
-}
-
 .experiencia-laboral th {
-    background-color: #e0e0e0;
+background-color: #f36e02;
+color: white;
+padding: 15px;
+}
+.experiencia-laboral td {
+padding: 12px;
+border-bottom: 1px solid #ddd;
 }
 
 .intereses {
-    margin-top: 20px;
-    text-align: center;
+margin-top: 20px;
+text-align: center;
 }
 
-.intereses-contenedor {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+.interes-item {
+background: white;
+border-radius: 15px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+padding: 15px;
+transition: transform 0.3s;
 }
-
+.interes-item:hover {
+transform: translateY(-5px);
+}
 .interes-item img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 10px;
+width: 150px;
+height: 150px;
+border-radius: 10px;
+object-fit: cover;
 }
-
-
-.contacto {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+/* .contacto {
+display: inline-flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
 }
 
 .contacto form {
-    border: 1px solid #000;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 300px;
+border: 1px solid #000;
+padding: 20px;
+display: inline-flex;
+flex-direction: column;
+gap: 10px;
+width: 300px;
 }
 
 .contacto input {
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #999;
+padding: 8px;
+border-radius: 5px;
+border: 1px solid #999;
 }
 
 .checkbox-terminos {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+display: flex;
+align-items: center;
+gap: 5px;
 }
 
 .contacto button {
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
+padding: 10px;
+background-color: #333;
+color: #fff;
+border-radius: 5px;
+border: none;
+cursor: pointer;
+transition: background-color 0.3s;
 }
 
 .contacto button:hover,
 .contacto button:focus {
-    background-color: #0056b3;
-    outline: none;
+background-color: #0056b3;
+outline: none;
+} */
+
+.contacto form {
+display: flex;
+flex-direction: column; 
+gap: 15px;
+background: white;
+box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+border-radius: 12px;
+padding: 30px;
+width: 100%;
+max-width: 400px;
 }
 
+.contacto input, {
+padding: 10px;
+border-radius: 8px;
+border: 1px solid #ccc;
+font-size: 1rem;
+}
+
+.contacto input,.contacto button,.contacto label {
+width: 100%;
+}
+
+.contacto button {
+background-color: #007bff;
+color: white;
+border: none;
+border-radius: 8px;
+padding: 12px;
+font-weight: 600;
+}
+.contacto button:hover {
+background-color: #0056b3;
+}
 
 .footer {
-    text-align: center;
-    padding: 15px;
-    background-color: #f4f4f4;
+text-align: center;
+background-color: #1a1a1a;
+padding: 30px 0;
 }
-
 .footer .social-icon {
-    font-size: 30px;
-    margin: 0 10px;
-    color: gray;
-    text-decoration: none;
-    transition: color 0.3s ease;
+color: #ccc;
+font-size: 1.8rem;
+margin: 0 15px;
+transition: color 0.3s;
 }
-
-.footer .social-icon:hover,
-.footer .social-icon:focus {
-    color: blue;
-    outline: none;
+.footer .social-icon:hover {
+color: #00d4ff;
 }
 
 html {
-    scroll-behavior: smooth;
+scroll-behavior: smooth;
 }
 
 
 @media (max-width: 600px) {
-    #navbar ul {
-        flex-direction: column;
-        gap: 10px;
-    }
+#navbar ul {
+flex-direction: column;
+gap: 10px;
+}
 
-    .intereses-contenedor {
-        flex-direction: column;
-        gap: 15px;
-    }
+.intereses-contenedor {
+flex-direction: column;
+gap: 15px;
+}
 
-    .contacto form {
-        width: 90%;
-    }
+.contacto form {
+width: 90%;
+}
 
-    .experiencia-laboral table {
-        font-size: 14px;
-    }
+.experiencia-laboral table {
+font-size: 14px;
+}
 
-    section {
-        padding: 80px 10px 40px;
-    }
+section {
+padding: 80px 10px 40px;
+}
 }
