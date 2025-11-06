@@ -33,6 +33,35 @@ body {
     outline: none;
 }
 
+.hero {
+background: linear-gradient(120deg, #1a1a1a, #007bff);
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 90vh;
+text-align: center;
+}
+.hero h1 {
+font-size: 2.8rem;
+}
+.hero span {
+color: #00d4ff;
+}
+.btn-primario {
+display: inline-block;
+margin-top: 20px;
+padding: 10px 25px;
+background: #00d4ff;
+color: #fff;
+border-radius: 8px;
+text-decoration: none;
+transition: transform 0.3s ease;
+}
+.btn-primario:hover {
+transform: scale(1.05);
+}
+
 section {
     padding: 100px 20px 50px; 
     min-height: 100vh;
