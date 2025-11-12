@@ -71,19 +71,22 @@ z-index: 1000;
   }
 }
 
-
 .hero {
   background: linear-gradient(135deg, #000000, #0a0a0a);
   color: white;
-  min-height: auto;
+  width: 100%;               
+  min-height: auto;         
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   flex-direction: column;
   gap: 20px;
-  padding: 40px 20px;
+  padding: 30px 5% 10px;   
+  margin: 0;                
+  box-sizing: border-box;    
 }
+
 
 .intro-code {
   font-family: "Fira Code", monospace;
@@ -279,12 +282,13 @@ object-fit: cover;
 .contacto h2 {
     font-size: 1.5rem;
   }
-
 .footer {
+  width: 100%;              
   text-align: center;
   background-color: #1a1a1a;
-  padding: 30px 0;
+  padding: 50px 5%;
   color: #ccc;
+  box-sizing: border-box;
 }
 
 .footer-text {
@@ -338,5 +342,9 @@ scroll-behavior: smooth;
 
   section {
     padding: 80px 10px 40px;
+  }
+  
+  .hero, .footer {
+    padding: 60px 15px;
   }
 } 
