@@ -2,7 +2,7 @@
 
 body {
 font-family: 'Poppins', sans-serif;
-background-color: #f8f9fa;
+background-color: #ffffff;
 color: #333;
 }
 h2 {
@@ -10,14 +10,6 @@ text-align: center;
 font-weight: 600;
 margin-bottom: 20px;
 color: #222;
-}
-
-#navbar {
-background-color: #222;
-position: fixed;
-top: 0;
-width: 100%;
-z-index: 1000;
 }
 
 #navbar ul {
@@ -40,17 +32,57 @@ transition: color 0.3s;
 color: #007bff;
 outline: none;
 }
-.hero {
-  background: linear-gradient(135deg, #000);
+#navbar {
+background-color: #222;
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 1000;
+}
+.menu-toggle {
+  display: none;
   color: white;
-  min-height: 100vh;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+
+  #navbar ul {
+    display: none;
+    flex-direction: column;
+    background-color: #222;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  #navbar ul.active {
+    display: flex;
+  }
+}
+
+
+.hero {
+  background: linear-gradient(135deg, #000000, #0a0a0a);
+  color: white;
+  min-height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   flex-direction: column;
   gap: 20px;
-  padding: 20px;
+  padding: 40px 20px;
 }
 
 .intro-code {
@@ -113,35 +145,30 @@ outline: none;
   box-shadow: 0 4px 10px rgba(0,212,255,0.4);
 }
 
-
-
-section:nth-child(even) {
-background-color: #ffffff;
-}
-section:nth-child(odd) {
-background-color: #f5f7fa;
-}
 section {
-padding: 100px 10%;
-border-radius: 12px;
-}
-
+  background-color: #ffffff;
+  padding: 100px 10%;
+  border-radius: 12px;
+} 
 .presentacion {
-background-color: #f0f0f0;
+background-color: #000000;
 margin-top: 20px;
 padding: 20px;
 border-radius: 8px;
 }
 
 .formacion-academica {
-text-align: left;
+text-align: center;
 margin-top: 20px;
 }
 
-.formacion-academica ul li {
-color: #333;
+.formacion-academica ul{
+  list-style-position: inside;  
+  padding-left: 0;              
+  display: inline-block;        
+  text-align: left;
+  color: #333             
 }
-
 .experiencia-laboral table {
 width: 100%;
 border-collapse: collapse;
@@ -151,7 +178,7 @@ overflow: hidden;
 box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 .experiencia-laboral th {
-background-color: #f36e02;
+background-color: #316303;
 color: white;
 padding: 15px;
 }
@@ -182,82 +209,134 @@ border-radius: 10px;
 object-fit: cover;
 }
 
+.contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;         
+  justify-content: center;     
+  text-align: center;
+  background-color: #ffffff;   
+  padding: 60px 0;
+}
+
+.contacto h2 {
+  margin-bottom: 25px;
+  color: #222;
+}
 
 .contacto form {
-display: flex;
-flex-direction: column; 
-gap: 15px;
-background: white;
-box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-border-radius: 12px;
-padding: 30px;
-width: 100%;
-max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;             
+  border: 1px solid #ccc;     
 }
 
-.contacto input, {
-padding: 10px;
-border-radius: 8px;
-border: 1px solid #ccc;
-font-size: 1rem;
+.contacto label {
+  text-align: left;
+  font-weight: 500;
+  color: #333;
 }
 
-.contacto input,.contacto button,.contacto label {
-width: 100%;
+.contacto input,
+.contacto select,
+.contacto textarea {
+  padding: 10px;               
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .contacto button {
-background-color: #007bff;
-color: white;
-border: none;
-border-radius: 8px;
-padding: 12px;
-font-weight: 600;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
 .contacto button:hover {
-background-color: #0056b3;
+  background-color: #0056b3;
+  transform: scale(1.03);
 }
+
+.contacto form {
+    width: 90%;
+    padding: 20px;
+  }
+
+.contacto h2 {
+    font-size: 1.5rem;
+  }
 
 .footer {
-text-align: center;
-background-color: #1a1a1a;
-padding: 30px 0;
-}
-.footer .social-icon {
-color: #ccc;
-font-size: 1.8rem;
-margin: 0 15px;
-transition: color 0.3s;
-}
-.footer .social-icon:hover {
-color: #00d4ff;
+  text-align: center;
+  background-color: #1a1a1a;
+  padding: 30px 0;
+  color: #ccc;
 }
 
+.footer-text {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 15px;
+}
+
+.footer .social-icon {
+  color: #ccc;
+  font-size: 1.8rem;
+  margin: 0 15px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer .social-icon:hover {
+  color: #00d4ff;
+  transform: scale(1.2);
+}
 html {
 scroll-behavior: smooth;
 }
 
-
 @media (max-width: 600px) {
-#navbar ul {
-flex-direction: column;
-gap: 10px;
-}
+  #navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-.intereses-contenedor {
-flex-direction: column;
-gap: 15px;
-}
+  .intereses-contenedor {
+    flex-direction: column;
+    gap: 15px;
+  }
 
-.contacto form {
-width: 90%;
-}
+  .contacto {
+    padding: 40px 10px;
+  }
 
-.experiencia-laboral table {
-font-size: 14px;
-}
+  .contacto form {
+    width: 90%;
+    padding: 20px;
+  }
 
-section {
-padding: 80px 10px 40px;
-}
-}
+  .contacto h2 {
+    font-size: 1.5rem;
+  }
+
+  .experiencia-laboral table {
+    font-size: 14px;
+  }
+
+  section {
+    padding: 80px 10px 40px;
+  }
+} 

@@ -11,26 +11,29 @@
 
 </head>
 <body>
-
     <nav id="navbar">
-        <ul>
-            <li><a href="#quien-soy">Quién Soy</a></li>
-            <li><a href="#formacion">Formación Académica</a></li>
-            <li><a href="#experiencia">Experiencia Laboral</a></li>
-            <li><a href="#intereses">Intereses</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
+  <div class="menu-toggle" id="menu-toggle">
+    <i class="fas fa-bars"></i>
+  </div>
+  <ul>
+    <li><a href="#quien-soy">Quién Soy</a></li>
+    <li><a href="#formacion">Formación</a></li>
+    <li><a href="#experiencia">Experiencia</a></li>
+    <li><a href="#intereses">Intereses</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
+
 <header class="hero">
   <div class="hero-content">
     <pre id="intro-code" class="intro-code"></pre>
-
+    <section id="quien-soy" class="presentacion">
     <h1>¡Hola! Soy <span>Nayla</span></h1>
     <p>Desarrolladora en formación y creadora de contenido audiovisual.</p>
     <a href="#contacto" class="btn-primario">Contáctame</a>
+    </section>
   </div>
 </header>
-<script src="portfolio.js"></script>
 
 <section id="formacion" class="formacion-academica">
     <h2>Formación Académica</h2>
@@ -98,15 +101,22 @@
 
         <label for="fecha">Fecha de contacto:</label>
         <input type="date" id="fecha" name="fecha" required>
-
+        <label for="archivo">Selecciona un archivo:</label>
+        <input type="file" id="archivo" name="archivo">
+        <label>
+        <input type="checkbox" id="terminos" name="terminos">
+        Acepto los términos y condiciones</label>
         <button type="submit">Enviar</button>
     </form>
 </section>
 
 <footer class="footer">
+  <div class="redes"></div>  
   <a href="https://www.linkedin.com/in/nayla-lamberto/" class="social-icon"><i class="fab fa-linkedin"></i></a>
   <a href="https://github.com/naylaworking-debug" class="social-icon"><i class="fab fa-github"></i></a>
+</div>
+  <p class="footer-text">© 2025 Todos los derechos reservados</p>
 </footer>
-    <script src="portfolio.js"></script>
+<script src="portfolio.js"></script>
 </body>
 </html>
